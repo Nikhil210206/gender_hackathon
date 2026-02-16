@@ -58,4 +58,9 @@ class GenderPredictor:
 predictor = GenderPredictor()
 
 def predict(image_path):
+    """
+    Returns:
+    label: int (0 = Male, 1 = Female)
+    confidence: float (0–1)
+    """
     return predictor.predict_image(image_path)
