@@ -27,7 +27,12 @@ class GenderPredictor:
             self.model = None
             
         self.transform = transforms.Compose([
-            transforms.Resize((224, 224)),
+            # OLD: transforms.Resize((224, 224)),  <-- This squashed images
+            
+            # NEW: Maintain Aspect Ratio
+            transforms.Resize(256),       # Resize shortest side to 256
+            transforms.CenterCrop(224),   # Crop the center 224x224
+            
             transforms.ToTensor(),
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
