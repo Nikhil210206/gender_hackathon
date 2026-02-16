@@ -1,0 +1,29 @@
+# --- Python Basics ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environment (Important!) ---
+venv/
+env/
+.venv/
+
+# --- Mac System Files ---
+.DS_Store
+._*
+
+# --- Datasets (Too big for Git) ---
+dataset/
+archive.zip
+raw_data_temp/
+
+# --- IDE Settings ---
+.vscode/
+.idea/
+
+# --- Build Artifacts ---
+# We ignore the zip because we can always regenerate it
+*.zip
+
+# --- Optional: Crash Logs ---
+*.log
